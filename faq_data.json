@@ -1,0 +1,18 @@
+[
+    {
+        "question": "Jaké jsou otevírací hodiny?",
+        "answer": "Máme otevřeno každý všední den od 8:00 do 17:00."
+    },
+    {
+        "question": "Kde vás najdu?",
+        "answer": "Sídlíme na adrese Vodičkova 123, Praha 1."
+    },
+    {
+        "question": "Jak mohu zaplatit?",
+        "answer": "Přijímáme hotovost, platební karty (Visa, Mastercard) i stravenky."
+    },
+    {
+        "question": "Mohu zboží vrátit?",
+        "answer": "Ano, zboží můžete vrátit do 14 dnů bez udání důvodu."
+    }
+]
