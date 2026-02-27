@@ -1,0 +1,6 @@
+venv/
+qdrant_storage/
+.env
+.pytest_cache/
+__pycache__/
+*.pyc

@@ -32,9 +32,13 @@ class FAQIngestor:
                 "type": "faq"
             }
 
+            # Create deterministic ID based on the question hash
+            # This ensures same question gets same ID, overwriting previous versions
+            record_id = str(uuid.uuid5(uuid.NAMESPACE_DNS, question))
+
             # Create Point
             point = models.PointStruct(
-                id=str(uuid.uuid4()),
+                id=record_id,
                 vector=vector,
                 payload=payload
             )

@@ -1,19 +1,30 @@
 from openai import OpenAI
 from app.core.config import settings
-import ollama # Keep ollama library for direct embedding if needed, or use OpenAI client for everything
+from ollama import Client
 
 class LLMService:
     def __init__(self):
+        base_url = settings.OLLAMA_BASE_URL
+        
+        # Ensure OpenAI client has the /v1 suffix
+        openai_url = base_url
+        if not openai_url.endswith("/v1") and not openai_url.endswith("/v1/"):
+            openai_url = openai_url.rstrip("/") + "/v1"
+            
         self.client = OpenAI(
-            base_url=settings.OLLAMA_BASE_URL,
+            base_url=openai_url,
             api_key=settings.OLLAMA_API_KEY
         )
+        
+        # Ensure native Ollama client DOES NOT have the /v1 suffix
+        ollama_host = base_url.replace("/v1/", "").replace("/v1", "").rstrip("/")
+        self.ollama_client = Client(host=ollama_host)
+        
         self.model = settings.OLLAMA_MODEL
 
     def get_embedding(self, text: str):
-        # Specific to Ollama embedding endpoint or use ollama python lib directly for efficiency
-        # Using ollama lib directly for embeddings as it's often more reliable for local models
-        response = ollama.embeddings(model='mxbai-embed-large', prompt=text)
+        # Specific to Ollama embedding endpoint using instantiated client with correct host
+        response = self.ollama_client.embeddings(model=settings.OLLAMA_EMBEDDING_MODEL, prompt=text)
         return response["embedding"]
 
     def generate_response(self, messages):

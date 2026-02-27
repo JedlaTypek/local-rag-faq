@@ -26,8 +26,21 @@ class QdrantVectorStore:
         )
 
     def search(self, vector, top_k=5):
-        return self.client.search(
-            collection_name=self.collection_name,
-            query_vector=vector,
-            limit=top_k
-        )
+        if hasattr(self.client, 'query_points'):
+            response = self.client.query_points(
+                collection_name=self.collection_name,
+                query=vector,
+                limit=top_k
+            )
+            return response.points
+        else:
+            return self.client.search(
+                collection_name=self.collection_name,
+                query_vector=vector,
+                limit=top_k
+            )
+
+    def clear_collection(self):
+        """Removes the collection and recreates an empty one to clear all data."""
+        self.client.delete_collection(collection_name=self.collection_name)
+        self._ensure_collection()

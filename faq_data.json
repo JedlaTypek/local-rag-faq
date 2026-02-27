@@ -1,18 +1,38 @@
 [
     {
-        "question": "Jaké jsou otevírací hodiny?",
-        "answer": "Máme otevřeno každý všední den od 8:00 do 17:00."
+        "question": "Jak dlouho trvá doručení objednávky?",
+        "answer": "Objednávky expedujeme do 24 hodin od přijetí platby. Doručení zásilkovou službou trvá obvykle 1 až 2 pracovní dny."
+    },
+    {
+        "question": "Jak mohu vrátit zboží bez udání důvodu?",
+        "answer": "Zboží můžete vrátit v původním, nepoškozeném obalu do 14 dnů od převzetí zásilky. Náklady na dopravu při vrácení hradí zákazník."
+    },
+    {
+        "question": "Vlastníte pražírnu kávy?",
+        "answer": "Ano, veškerou naši kávu pražíme přímo v Hradci nad Moravicí. Pražení probíhá vždy v úterý a ve středu, aby byla káva co nejčerstvější."
+    },
+    {
+        "question": "Máte kamennou prodejnu, kam si mohu přijít pro kávu?",
+        "answer": "Ano, naše prodejna se nachází v centru Hradce nad Moravicí na adrese Opavská 45. Otevřeno máme od pondělí do pátku v čase 9:00 až 17:00."
+    },
+    {
+        "question": "Jaké platební metody přijímáte?",
+        "answer": "Přijímáme platby platební kartou (Visa, Mastercard), bankovním převodem a také nabízíme možnost dobírky při převzetí zásilky."
+    },
+    {
+        "question": "Co mám dělat, když mi přijde poškozený balík?",
+        "answer": "Pokud zásilka vykazuje známky poškození, nepřebírejte ji od dopravce. Pokud balík převezmete a poškození zjistíte až doma, kontaktujte nás do 48 hodin na podpora@kavamoravia.cz a přiložte fotografie poškození."
+    },
+    {
+        "question": "Nabízíte věrnostní program pro stálé zákazníky?",
+        "answer": "Ano, máme věrnostní klub Káva Moravia. Za každých utracených 100 Kč získáte 5 bodů. Body lze následně směnit za slevové kupóny v košíku."
+    },
+    {
+        "question": "Je vaše káva vhodná pro vegany?",
+        "answer": "Ano, veškerá naše zrnková káva je 100% rostlinného původu a neobsahuje žádné živočišné produkty."
     },
     {
         "question": "Kde vás najdu?",
-        "answer": "Sídlíme na adrese Vodičkova 123, Praha 1."
-    },
-    {
-        "question": "Jak mohu zaplatit?",
-        "answer": "Přijímáme hotovost, platební karty (Visa, Mastercard) i stravenky."
-    },
-    {
-        "question": "Mohu zboží vrátit?",
-        "answer": "Ano, zboží můžete vrátit do 14 dnů bez udání důvodu."
+        "answer": "Naše prodejna a pražírna se nachází v Hradci nad Moravicí na adrese Opavská 45. Otevřeno máme Po-Pá 9:00–17:00."
     }
 ]

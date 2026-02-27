@@ -15,3 +15,14 @@ def ingest_data(request: IngestRequest):
         return {"status": "success", "indexed_items": count}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+@router.delete("/ingest/clear")
+def clear_database():
+    try:
+        # Import inside the function to avoid circular imports if any, or just import at top
+        from app.db.vector_store import QdrantVectorStore
+        store = QdrantVectorStore()
+        store.clear_collection()
+        return {"status": "success", "message": "Database collection cleared successfully"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

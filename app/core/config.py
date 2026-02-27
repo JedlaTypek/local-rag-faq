@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     # LLM Settings
     OLLAMA_BASE_URL: str = "http://localhost:11434/v1"
     OLLAMA_MODEL: str = "llama3"
+    OLLAMA_EMBEDDING_MODEL: str = "mxbai-embed-large"
     OLLAMA_API_KEY: str = "ollama" # Dummy key for local
 
     class Config:
